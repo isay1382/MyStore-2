@@ -1,18 +1,22 @@
 package com.example.mystore;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
-class Viewcounts{
+class ViewCounts{
     public int count;
 }
 
-class Storee{
+class Store{
     public String name;
 }
 
 class Rows {
-    public Storee Store;
-    public List<Viewcounts> ViewCounts;
+    @SerializedName("Store")
+    public Store store;
+    @SerializedName("ViewCounts")
+    public List<ViewCounts> viewCounts;
     public int id;
     public String name;
     public String introduction;
@@ -27,8 +31,6 @@ class Rows {
     public int CategoryId;
     public int SubCategoryId;
     public int StoreId;
-
-
 }
 
 public class ListProducts {
