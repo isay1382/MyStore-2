@@ -38,7 +38,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:text="name"
+                    tools:text="name"
                     android:textSize="16sp" />
 
                 <TextView
@@ -67,7 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:text="dasteBandy"
+                    tools:text="dasteBandy"
                     android:textSize="16sp" />
 
                 <TextView
@@ -96,7 +96,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:text="nameStore"
+                    tools:text="nameStore"
                     android:textSize="16sp" />
 
                 <TextView
@@ -125,7 +125,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:text="stock"
+                    tools:text="stock"
                     android:textSize="16sp" />
 
                 <TextView
@@ -154,7 +154,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:text="brand"
+                    tools:text="brand"
                     android:textSize="16sp" />
 
                 <TextView
@@ -184,7 +184,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:text="description"
+                    tools:text="description"
                     android:textSize="16sp" />
 
                 <TextView
@@ -214,7 +214,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:text="features"
+                    tools:text="features"
                     android:textSize="16sp" />
 
                 <TextView
@@ -243,7 +243,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:text="10000"
+                    tools:text="10000"
                     android:textColor="#00C853"
                     android:textSize="16sp"
                     android:padding="4dp"/>
@@ -275,7 +275,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:text="100"
+                    tools:text="100"
                     android:textColor="#D50000"
                     android:textSize="16sp"
                     android:padding="4dp"/>
@@ -308,7 +308,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:text="9900"
+                    tools:text="9900"
                     android:textColor="#000"
                     android:textSize="16sp"
                     android:padding="4dp"/>
