@@ -21,8 +21,11 @@ class Brand {
 }
 
 class Features {
-    public int count;
-    public String color;
+}
+
+class ProductRate{
+    public int sum_of_rates;
+    public int count_of_rates;
 }
 
 class Product {
@@ -54,5 +57,5 @@ class Product {
 
 public class ListProductsShow {
     public Product product;
-    public String productRate;
+    public ProductRate productRate;
 }

@@ -110,6 +110,7 @@ public class ShowProducts extends AppCompatActivity implements BaseSliderView.On
         txtStock.setText(String.valueOf(listProductsShow.product.stock));
         txtBrand.setText(listProductsShow.product.brandShow.name);
         txtDescription.setText(listProductsShow.product.description);
+        txtFeatures.setText(String.valueOf(listProductsShow.product.featuresShow));
         txtPrice.setText(String.valueOf(listProductsShow.product.price));
         txtDisPrice.setText(String.valueOf(listProductsShow.product.discount));
 
