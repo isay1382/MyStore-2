@@ -2,7 +2,9 @@ package com.example.mystore;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.backup.RestoreObserver;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -11,12 +13,24 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.Executors;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ShowProducts extends AppCompatActivity implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
 
@@ -41,7 +55,9 @@ public class ShowProducts extends AppCompatActivity implements BaseSliderView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_products);
-        Hash_file_maps=new HashMap<String, String>();
+
+        Hash_file_maps=new HashMap<>();
+
         sliderLayout=findViewById(R.id.slider);
 
         txtName=findViewById(R.id.name_ShowProducts);
@@ -81,8 +97,6 @@ public class ShowProducts extends AppCompatActivity implements BaseSliderView.On
         sliderLayout.setDuration(3000);
         sliderLayout.addOnPageChangeListener(this);
 
-
-
         interfaceShowProducts=RetrofitClientShowProducts.getShowRetrofitClient(url).create(InterfaceShowProducts.class);
         interfaceShowProducts.getShowProducts(id).enqueue(new Callback<ListProductsShow>() {
             @Override
@@ -99,8 +113,6 @@ public class ShowProducts extends AppCompatActivity implements BaseSliderView.On
             }
         });
 
-
-
     }
 
     private void ResponseShowProduct(ListProductsShow listProductsShow){
@@ -115,7 +127,6 @@ public class ShowProducts extends AppCompatActivity implements BaseSliderView.On
         txtDisPrice.setText(String.valueOf(listProductsShow.product.discount));
 
     }
-
 
     protected void onStop(){
         sliderLayout.stopAutoCycle();

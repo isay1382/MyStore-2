@@ -9,10 +9,12 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:scrollbars="none"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="4dp"
             android:layout_height="wrap_content">
 
             <com.daimajia.slider.library.SliderLayout
@@ -27,7 +29,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/slider"
                 android:layout_marginLeft="4dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
@@ -38,8 +40,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    tools:text="name"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:text="name" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -57,6 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/linear1"
                 android:layout_marginLeft="4dp"
+                android:layout_marginTop="1dp"
                 android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
@@ -67,8 +70,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    tools:text="dasteBandy"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:text="dasteBandy" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -86,6 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear2"
                 android:layout_marginLeft="4dp"
+                android:layout_marginTop="1dp"
                 android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
@@ -96,8 +100,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    tools:text="nameStore"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:text="nameStore" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -115,6 +119,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear3"
                 android:layout_marginLeft="4dp"
+                android:layout_marginTop="1dp"
                 android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
@@ -125,8 +130,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    tools:text="stock"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:text="stock" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -144,6 +149,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear4"
                 android:layout_marginLeft="4dp"
+                android:layout_marginTop="1dp"
                 android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
@@ -154,8 +160,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    tools:text="brand"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:text="brand" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -173,7 +179,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear5"
                 android:layout_marginLeft="4dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
@@ -184,8 +190,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    tools:text="description"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:text="description" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -203,7 +209,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear6"
                 android:layout_marginLeft="4dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
@@ -214,8 +220,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    tools:text="features"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    tools:text="features" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -233,7 +239,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear7"
                 android:layout_marginLeft="4dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:padding="8dp">
@@ -243,20 +249,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    tools:text="10000"
+                    android:padding="4dp"
                     android:textColor="#00C853"
                     android:textSize="16sp"
-                    android:padding="4dp"/>
+                    tools:text="10000" />
 
                 <TextView
-                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
                     android:layout_marginRight="8dp"
+                    android:padding="4dp"
                     android:text="قیمت :"
                     android:textColor="#00C853"
-                    android:textSize="16sp"
-                    android:padding="4dp"/>
+                    android:textSize="16sp" />
 
             </RelativeLayout>
 
@@ -275,20 +281,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    tools:text="100"
+                    android:padding="4dp"
                     android:textColor="#D50000"
                     android:textSize="16sp"
-                    android:padding="4dp"/>
+                    tools:text="100" />
 
                 <TextView
-                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
                     android:layout_marginRight="8dp"
+                    android:padding="4dp"
                     android:text="تخفیف :"
                     android:textColor="#D50000"
-                    android:textSize="16sp"
-                    android:padding="4dp"/>
+                    android:textSize="16sp" />
 
             </RelativeLayout>
 
@@ -299,7 +305,6 @@
                 android:layout_below="@+id/linear9"
                 android:layout_marginLeft="4dp"
                 android:layout_marginRight="4dp"
-                android:layout_marginBottom="4dp"
                 android:background="#fff"
                 android:padding="8dp">
 
@@ -308,19 +313,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    tools:text="9900"
+                    android:padding="4dp"
                     android:textColor="#000"
                     android:textSize="16sp"
-                    android:padding="4dp"/>
+                    tools:text="9900" />
 
                 <TextView
-                    android:layout_alignParentRight="true"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
                     android:layout_marginRight="8dp"
+                    android:padding="4dp"
                     android:text="قیمت نهایی :"
-                    android:textSize="16sp"
-                    android:padding="4dp"/>
+                    android:textSize="16sp" />
 
             </RelativeLayout>
 

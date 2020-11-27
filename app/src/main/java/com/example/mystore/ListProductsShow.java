@@ -1,7 +1,15 @@
 package com.example.mystore;
 
+import com.google.gson.JsonObject;
+import com.google.gson.TypeAdapter;
 import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+
+import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 class ViewCountsShow {
     public int count;
@@ -21,11 +29,20 @@ class Brand {
 }
 
 class Features {
+    public Map<String, Map<String, Integer>> settingsMap;
+
+    public  Features(){
+        settingsMap = new HashMap<>();
+    }
+    public void add(String key, Map<String, Integer> settingMap){
+        settingsMap.put(key, settingMap);
+    }
+
 }
 
-class ProductRate{
-    public int sum_of_rates;
-    public int count_of_rates;
+class ProductRate {
+    public String sum_of_rates;
+    public String count_of_rates;
 }
 
 class Product {
@@ -38,7 +55,7 @@ class Product {
     @SerializedName("features")
     public Features featuresShow;
     @SerializedName("ViewCounts")
-    public List<ViewCountsShow> viewCountsShows;
+    public ViewCountsShow viewCountsShows;
     public int id;
     public String name;
     public String introduction;
