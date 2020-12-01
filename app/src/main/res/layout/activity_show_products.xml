@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="#E1DCDC"
+    android:orientation="vertical"
     tools:context=".ShowProducts">
 
     <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="none">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_marginBottom="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="2dp"
             android:layout_height="wrap_content">
 
             <com.daimajia.slider.library.SliderLayout
@@ -23,14 +28,17 @@
                 android:layout_height="320dp"
                 android:background="#fff" />
 
+            <RelativeLayout
+                android:id="@+id/linearAfterSlider"
+                android:layout_below="@id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
             <LinearLayout
                 android:id="@+id/linear1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/slider"
-                android:layout_marginLeft="4dp"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
                 android:padding="8dp">
@@ -58,9 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/linear1"
-                android:layout_marginLeft="4dp"
                 android:layout_marginTop="1dp"
-                android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
                 android:padding="8dp">
@@ -88,9 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear2"
-                android:layout_marginLeft="4dp"
                 android:layout_marginTop="1dp"
-                android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
                 android:padding="8dp">
@@ -118,9 +122,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear3"
-                android:layout_marginLeft="4dp"
                 android:layout_marginTop="1dp"
-                android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
                 android:padding="8dp">
@@ -148,9 +150,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear4"
-                android:layout_marginLeft="4dp"
                 android:layout_marginTop="1dp"
-                android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
                 android:padding="8dp">
@@ -178,9 +178,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear5"
-                android:layout_marginLeft="4dp"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
                 android:padding="8dp">
@@ -208,9 +206,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear6"
-                android:layout_marginLeft="4dp"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:gravity="right"
                 android:padding="8dp">
@@ -238,9 +234,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear7"
-                android:layout_marginLeft="4dp"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:padding="8dp">
 
@@ -249,7 +243,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:padding="4dp"
                     android:textColor="#00C853"
                     android:textSize="16sp"
                     tools:text="10000" />
@@ -259,7 +252,6 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="8dp"
-                    android:padding="4dp"
                     android:text="قیمت :"
                     android:textColor="#00C853"
                     android:textSize="16sp" />
@@ -271,8 +263,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear8"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:padding="8dp">
 
@@ -281,7 +271,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:padding="4dp"
                     android:textColor="#D50000"
                     android:textSize="16sp"
                     tools:text="100" />
@@ -291,7 +280,6 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="8dp"
-                    android:padding="4dp"
                     android:text="تخفیف :"
                     android:textColor="#D50000"
                     android:textSize="16sp" />
@@ -303,8 +291,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/linear9"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="4dp"
                 android:background="#fff"
                 android:padding="8dp">
 
@@ -313,7 +299,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="8dp"
-                    android:padding="4dp"
                     android:textColor="#000"
                     android:textSize="16sp"
                     tools:text="9900" />
@@ -323,14 +308,21 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="8dp"
-                    android:padding="4dp"
                     android:text="قیمت نهایی :"
                     android:textSize="16sp" />
 
             </RelativeLayout>
-
         </RelativeLayout>
 
-    </ScrollView>
+            <Button
+                android:layout_below="@+id/linearAfterSlider"
+                android:id="@+id/btn_basket_ShowProduct"
+                android:layout_width="match_parent"
+                android:backgroundTint="#4CAF50"
+                android:text="افزودن به سبد خرید"
+                android:textSize="16dp"
+                android:layout_height="60dp"/>
 
-</RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

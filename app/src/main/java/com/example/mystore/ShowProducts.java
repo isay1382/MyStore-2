@@ -109,7 +109,6 @@ public class ShowProducts extends AppCompatActivity implements BaseSliderView.On
             @Override
             public void onFailure(Call<ListProductsShow> call, Throwable t) {
                 Toast.makeText(ShowProducts.this, "ERROR", Toast.LENGTH_SHORT).show();
-
             }
         });
 
@@ -122,7 +121,7 @@ public class ShowProducts extends AppCompatActivity implements BaseSliderView.On
         txtStock.setText(String.valueOf(listProductsShow.product.stock));
         txtBrand.setText(listProductsShow.product.brandShow.name);
         txtDescription.setText(listProductsShow.product.description);
-        txtFeatures.setText(String.valueOf(listProductsShow.product.featuresShow));
+        txtFeatures.setText(String.valueOf(listProductsShow.product.featuresShow.settingsMap));
         txtPrice.setText(String.valueOf(listProductsShow.product.price));
         txtDisPrice.setText(String.valueOf(listProductsShow.product.discount));
 
