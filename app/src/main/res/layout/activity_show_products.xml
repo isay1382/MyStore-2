@@ -16,11 +16,11 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
             android:layout_marginTop="2dp"
             android:layout_marginRight="2dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginBottom="2dp"
-            android:layout_height="wrap_content">
+            android:layout_marginBottom="2dp">
 
             <com.daimajia.slider.library.SliderLayout
                 android:id="@+id/slider"
@@ -30,298 +30,302 @@
 
             <RelativeLayout
                 android:id="@+id/linearAfterSlider"
-                android:layout_below="@id/slider"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:layout_below="@id/slider">
 
-            <LinearLayout
-                android:id="@+id/linear1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:background="#fff"
-                android:gravity="right"
-                android:padding="8dp">
-
-                <TextView
-                    android:id="@+id/name_ShowProducts"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/linear1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:textSize="16sp"
-                    tools:text="name" />
+                    android:layout_marginTop="4dp"
+                    android:background="#fff"
+                    android:gravity="right"
+                    android:padding="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/name_ShowProducts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:textSize="16sp"
+                        tools:text="name" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="نام :"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:text="نام :"
-                    android:textSize="16sp" />
+                    android:layout_below="@id/linear1"
+                    android:layout_marginTop="1dp"
+                    android:background="#fff"
+                    android:gravity="right"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/nameDasteBandi_ShowProducts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:textSize="16sp"
+                        tools:text="dasteBandy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="نام دسته بندی :"
+                        android:textSize="16sp" />
 
 
-            </LinearLayout>
+                </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/linear2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/linear1"
-                android:layout_marginTop="1dp"
-                android:background="#fff"
-                android:gravity="right"
-                android:padding="8dp">
-
-                <TextView
-                    android:id="@+id/nameDasteBandi_ShowProducts"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/linear3"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:textSize="16sp"
-                    tools:text="dasteBandy" />
+                    android:layout_below="@+id/linear2"
+                    android:layout_marginTop="1dp"
+                    android:background="#fff"
+                    android:gravity="right"
+                    android:padding="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/nameStore_ShowProducts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:textSize="16sp"
+                        tools:text="nameStore" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="نام فروشنده :"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear4"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:text="نام دسته بندی :"
-                    android:textSize="16sp" />
+                    android:layout_below="@+id/linear3"
+                    android:layout_marginTop="1dp"
+                    android:background="#fff"
+                    android:gravity="right"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/stock_ShowProducts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:textSize="16sp"
+                        tools:text="stock" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="موجودی :"
+                        android:textSize="16sp" />
 
 
-            </LinearLayout>
+                </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/linear3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linear2"
-                android:layout_marginTop="1dp"
-                android:background="#fff"
-                android:gravity="right"
-                android:padding="8dp">
-
-                <TextView
-                    android:id="@+id/nameStore_ShowProducts"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/linear5"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:textSize="16sp"
-                    tools:text="nameStore" />
+                    android:layout_below="@+id/linear4"
+                    android:layout_marginTop="1dp"
+                    android:background="#fff"
+                    android:gravity="right"
+                    android:padding="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/brand_ShowProducts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:textSize="16sp"
+                        tools:text="brand" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="نام برند :"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear6"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:text="نام فروشنده :"
-                    android:textSize="16sp" />
+                    android:layout_below="@+id/linear5"
+                    android:layout_marginTop="4dp"
+                    android:background="#fff"
+                    android:gravity="right"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/description_ShowProducts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:textSize="16sp"
+                        tools:text="description" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="توصیف :"
+                        android:textSize="16sp" />
 
 
-            </LinearLayout>
+                </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/linear4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linear3"
-                android:layout_marginTop="1dp"
-                android:background="#fff"
-                android:gravity="right"
-                android:padding="8dp">
-
-                <TextView
-                    android:id="@+id/stock_ShowProducts"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/linear7"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:textSize="16sp"
-                    tools:text="stock" />
+                    android:layout_below="@+id/linear6"
+                    android:layout_marginTop="4dp"
+                    android:background="#fff"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/linearAddFeaturesShow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:layout_toLeftOf="@+id/txt"
+                        android:layoutDirection="rtl"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:text="مشخصات :"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/linear8"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:text="موجودی :"
-                    android:textSize="16sp" />
+                    android:layout_below="@+id/linear7"
+                    android:layout_marginTop="4dp"
+                    android:background="#fff"
+                    android:padding="8dp">
 
+                    <TextView
+                        android:id="@+id/price_ShowProducts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:textColor="#00C853"
+                        android:textSize="16sp"
+                        tools:text="10000" />
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:text="قیمت :"
+                        android:textColor="#00C853"
+                        android:textSize="16sp" />
 
-            <LinearLayout
-                android:id="@+id/linear5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linear4"
-                android:layout_marginTop="1dp"
-                android:background="#fff"
-                android:gravity="right"
-                android:padding="8dp">
+                </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/brand_ShowProducts"
-                    android:layout_width="wrap_content"
+                <RelativeLayout
+                    android:id="@+id/linear9"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:textSize="16sp"
-                    tools:text="brand" />
+                    android:layout_below="@+id/linear8"
+                    android:background="#fff"
+                    android:padding="8dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/disPrice_ShowProducts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:textColor="#D50000"
+                        android:textSize="16sp"
+                        tools:text="100" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:text="تخفیف :"
+                        android:textColor="#D50000"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/linear10"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:text="نام برند :"
-                    android:textSize="16sp" />
+                    android:layout_below="@+id/linear9"
+                    android:background="#fff"
+                    android:padding="8dp">
 
+                    <TextView
+                        android:id="@+id/priceNahayi_ShowProducts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:textColor="#000"
+                        android:textSize="16sp"
+                        tools:text="9900" />
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="8dp"
+                        android:text="قیمت نهایی :"
+                        android:textSize="16sp" />
 
-            <LinearLayout
-                android:id="@+id/linear6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linear5"
-                android:layout_marginTop="4dp"
-                android:background="#fff"
-                android:gravity="right"
-                android:padding="8dp">
-
-                <TextView
-                    android:id="@+id/description_ShowProducts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:textSize="16sp"
-                    tools:text="description" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:text="توصیف :"
-                    android:textSize="16sp" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linear7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linear6"
-                android:layout_marginTop="4dp"
-                android:background="#fff"
-                android:gravity="right"
-                android:padding="8dp">
-
-                <TextView
-                    android:id="@+id/features_ShowProducts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:textSize="16sp"
-                    tools:text="features" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:text="مشخصات :"
-                    android:textSize="16sp" />
-
-
-            </LinearLayout>
-
-            <RelativeLayout
-                android:id="@+id/linear8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linear7"
-                android:layout_marginTop="4dp"
-                android:background="#fff"
-                android:padding="8dp">
-
-                <TextView
-                    android:id="@+id/price_ShowProducts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:textColor="#00C853"
-                    android:textSize="16sp"
-                    tools:text="10000" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="8dp"
-                    android:text="قیمت :"
-                    android:textColor="#00C853"
-                    android:textSize="16sp" />
-
+                </RelativeLayout>
             </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/linear9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linear8"
-                android:background="#fff"
-                android:padding="8dp">
-
-                <TextView
-                    android:id="@+id/disPrice_ShowProducts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:textColor="#D50000"
-                    android:textSize="16sp"
-                    tools:text="100" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="8dp"
-                    android:text="تخفیف :"
-                    android:textColor="#D50000"
-                    android:textSize="16sp" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/linear10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/linear9"
-                android:background="#fff"
-                android:padding="8dp">
-
-                <TextView
-                    android:id="@+id/priceNahayi_ShowProducts"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="8dp"
-                    android:textColor="#000"
-                    android:textSize="16sp"
-                    tools:text="9900" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="8dp"
-                    android:text="قیمت نهایی :"
-                    android:textSize="16sp" />
-
-            </RelativeLayout>
-        </RelativeLayout>
 
             <Button
-                android:layout_below="@+id/linearAfterSlider"
                 android:id="@+id/btn_basket_ShowProduct"
                 android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/linearAfterSlider"
                 android:backgroundTint="#4CAF50"
                 android:text="افزودن به سبد خرید"
-                android:textSize="16dp"
-                android:layout_height="60dp"/>
+                android:textSize="16dp" />
 
         </RelativeLayout>
     </ScrollView>

@@ -2,9 +2,11 @@ package com.example.mystore;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.backup.RestoreObserver;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,24 +15,16 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonDeserializationContext;
-import com.google.gson.JsonDeserializer;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParseException;
-import com.google.gson.reflect.TypeToken;
+import com.google.gson.Gson;
 
-import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-import java.util.concurrent.Executors;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ShowProducts extends AppCompatActivity implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
 
@@ -44,12 +38,15 @@ public class ShowProducts extends AppCompatActivity implements BaseSliderView.On
     TextView txtStock;
     TextView txtBrand;
     TextView txtDescription;
-    TextView txtFeatures;
+    //TextView txtFeatures;
     TextView txtPrice;
     TextView txtDisPrice;
     TextView txtPriceEnd;
+    LinearLayout linearAddFeature;
 
     InterfaceShowProducts interfaceShowProducts;
+    LinearLayout.LayoutParams layoutParams;
+    //Gson gson=new Gson();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +63,8 @@ public class ShowProducts extends AppCompatActivity implements BaseSliderView.On
         txtStock=findViewById(R.id.stock_ShowProducts);
         txtBrand=findViewById(R.id.brand_ShowProducts);
         txtDescription=findViewById(R.id.description_ShowProducts);
-        txtFeatures=findViewById(R.id.features_ShowProducts);
+        //txtFeatures=findViewById(R.id.features_ShowProducts);
+        linearAddFeature=findViewById(R.id.linearAddFeaturesShow);
         txtPrice=findViewById(R.id.price_ShowProducts);
         txtDisPrice=findViewById(R.id.disPrice_ShowProducts);
         txtPriceEnd=findViewById(R.id.priceNahayi_ShowProducts);
@@ -121,7 +119,15 @@ public class ShowProducts extends AppCompatActivity implements BaseSliderView.On
         txtStock.setText(String.valueOf(listProductsShow.product.stock));
         txtBrand.setText(listProductsShow.product.brandShow.name);
         txtDescription.setText(listProductsShow.product.description);
-        txtFeatures.setText(String.valueOf(listProductsShow.product.featuresShow.settingsMap));
+        for (Map.Entry<String,String> getObject:listProductsShow.product.featuresShow.settingMap.entrySet()){
+            String key=getObject.getKey();
+            String value=getObject.getValue();
+            CustomGetObjectFeatuere customGetObjectFeatuere=new CustomGetObjectFeatuere(ShowProducts.this);
+            customGetObjectFeatuere.txtKeyCustom.setText(key+" :");
+            customGetObjectFeatuere.txtValueCustom.setText(value);
+            layoutParams=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+            linearAddFeature.addView(customGetObjectFeatuere);
+        }
         txtPrice.setText(String.valueOf(listProductsShow.product.price));
         txtDisPrice.setText(String.valueOf(listProductsShow.product.discount));
 

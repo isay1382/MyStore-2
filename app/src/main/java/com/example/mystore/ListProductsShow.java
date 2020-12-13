@@ -1,8 +1,19 @@
 package com.example.mystore;
+
+import android.os.Build;
+import android.util.Log;
+
+import androidx.annotation.RequiresApi;
+
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.google.gson.annotations.SerializedName;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 class ViewCountsShow {
     public int count;
@@ -21,16 +32,21 @@ class Brand {
     public String name;
 }
 
-class Features{
-   public Map<String,String> settingsMap;
-    public  Features(){
-        settingsMap = new HashMap<>();
+class Features {
+    public HashMap<String,String> settingMap;
+
+    public Features() {
+          settingMap=new HashMap<>();
+    }
+
+    public void add(String key,String value){
+        settingMap.put(key, value);
     }
 }
 
 //class ProductRate {
-   // public int sum_of_rates;
-    //public int count_of_rates;
+// public int sum_of_rates;
+//public int count_of_rates;
 //}
 
 class Product {
