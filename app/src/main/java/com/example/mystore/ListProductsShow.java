@@ -33,13 +33,13 @@ class Brand {
 }
 
 class Features {
-    public HashMap<String,String> settingMap;
+    public HashMap<String, String> settingMap;
 
     public Features() {
-          settingMap=new HashMap<>();
+        settingMap = new HashMap<>();
     }
 
-    public void add(String key,String value){
+    public void add(String key, String value) {
         settingMap.put(key, value);
     }
 }

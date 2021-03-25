@@ -1,31 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".NeshanMap">
+
+    <RelativeLayout
+        android:id="@+id/relativeNeshan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/BlueAsli"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="نزدیک من"
+            android:textColor="#fff"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
 
     <org.neshan.ui.MapView
         android:id="@+id/map"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:fabSize="mini"
-        android:src="@drawable/ic_baseline_my_location_24"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:onClick="focusOnUserLocation"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/relativeNeshan" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/CoordinatoreReversBottomSheet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/floatAction"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+       <include
+           android:id="@+id/reverse_bottom_sheet_include"
+           layout="@layout/reverse_bottom_sheet"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/relativeNeshan"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:backgroundTint="#AA00FF"
+            android:drawableRight="@drawable/ic_baseline_menu_open_24"
+            android:layout_marginLeft="8dp"
+            android:text="مشاهده روی لیست"
+            android:layout_marginRight="4dp"
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+        <Button
+            android:backgroundTint="#E3E0E0"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="4dp"
+            android:textAlignment="viewEnd"
+            android:drawableLeft="@drawable/ic_baseline_keyboard_arrow_down_24"
+            android:textColor="#454444"
+            android:textSize="16dp"
+            android:text="دسته بندی"
+            android:layout_weight="0.5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="focusOnUserLocation"
+        android:src="@drawable/ic_baseline_my_location_24"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/floatAction"
+        app:layout_constraintRight_toRightOf="@+id/floatAction">
+
+        <ImageView
+            android:id="@+id/theme_preview"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:onClick="changeStyle"
+            android:scaleType="centerCrop" />
+
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
